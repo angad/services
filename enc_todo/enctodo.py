@@ -8,7 +8,7 @@ from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
 from base64 import b64decode 
 
-server_url = "http://0.0.0.0:5005/"
+server_url = "http://e.mewster.com/"
 register_url = server_url + "register"
 new_task_url = server_url + "new"
 list_tasks_url = server_url + "list"
@@ -92,6 +92,7 @@ def list_tasks(pubkey, privkey):
     tasks = json.loads(r.text)
   except ValueError:
     sys.stderr.write("Error in retrieving list")
+    return
   for task in tasks:
     print decrypt_RSA(privkey, task['task'])
 
