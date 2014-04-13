@@ -1,11 +1,16 @@
 ## Encrypted TODO List
 
-Finds your public private key pair in .ssh directory and uses the public key
-to locally encrypt the task message and store it on the server.
+Uses your public key to locally encrypt the task message and store it on the server.
+
 To retrieve the task, it gets the encrypted task from the server and decrypts it 
 with your private key. 
+
 Only your public key is transmitted to the server to identify as a unique user
 and to retrieve your tasks.
+
+TODO:
+- support password protected keys
+- support DSA keys (currently only RSA)
 
 
     python enctodo.py --help
