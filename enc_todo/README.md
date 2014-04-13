@@ -8,9 +8,8 @@ with your private key.
 Only your public key is transmitted to the server to identify as a unique user
 and to retrieve your tasks.
 
-TODO:
-- support password protected keys
-- support DSA keys (currently only RSA)
+TODO: support password protected keys
+
 
 
     python enctodo.py --help
